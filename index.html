@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<script>
+function observeNewThought() {
+	const input = document.getElementById('your-thought');
+	const newThought = document.createElement('div');
+	newThought.classList.add('thought');
+	newThought.append(input.value);
+	const ctr = document.getElementById('thought-container');
+	ctr.prepend(newThought);
+	input.value = '';
+}
+</script>
+<style>
+.thought {
+	padding: 4rem;
+	border: solid 1px black;
+	animation: fadeOut 5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#input-container {
+	padding: 2rem;
+	border: solid 1px black;
+	border-radius: 5px;
+	position: fixed;
+	bottom: 5px;
+	font-size: 28px;
+}
+
+</style>
+<body>
+<main>
+<div id="thought-container"></div>
+<div id="input-container">
+<label for="your-thought">type your thought here</label>
+<input id="your-thought" type="text" name="your-thought" />
+<button type="button" onclick="observeNewThought()">observe & let go</button>
+</div>
+</main>
+</body>
+</html>
