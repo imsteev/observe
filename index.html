@@ -28,22 +28,27 @@ function observeNewThought() {
 }
 
 #input-container {
-	padding: 2rem;
-	border: solid 1px black;
+	padding: 1rem;
 	border-radius: 5px;
 	position: fixed;
 	bottom: 5px;
-	font-size: 28px;
+	font-size: 20px;
+	gap: 2rem;
+	margin-inline: auto;
 }
 
+input {
+	font-size: 28px;
+}
 </style>
 <body>
 <main>
 <div id="thought-container"></div>
 <div id="input-container">
-<label for="your-thought">type your thought here</label>
-<input id="your-thought" type="text" name="your-thought" />
-<button type="button" onclick="observeNewThought()">observe & let go</button>
+<b>type your thought</b>
+<p>you will see it on the screen, and then see it die</p>
+<textarea rows="10" cols="40" id="your-thought" type="text" name="your-thought"></textarea>
+<button type="button" onclick="observeNewThought()">observe</button>
 </div>
 </main>
 </body>
