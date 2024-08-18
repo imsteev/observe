@@ -9,6 +9,9 @@ function observeNewThought() {
 	const ctr = document.getElementById('thought-container');
 	ctr.prepend(newThought);
 	input.value = '';
+	setTimeout(() => {
+		newThought.remove();
+	}, 3000);
 }
 </script>
 <style>
